@@ -1,0 +1,5 @@
+LIBRARY "5.dll"
+
+EXPORTS
+	function1
+	function2

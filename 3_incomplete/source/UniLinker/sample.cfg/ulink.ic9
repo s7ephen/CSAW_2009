@@ -1,0 +1,3 @@
+-LE:\ICL\9.1\Ia32\Lib;E:\VC8\VC\LIB;J:\_MS\SDK\LIB
+-zkernel32;advapi32;user32;ws2_32;shell32
+-Ri -Gh

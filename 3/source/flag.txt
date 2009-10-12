@@ -1,0 +1,88 @@
+navi-two:source s7ephen$ ../../utils/sa7encode.py 
+Enter the plaintext> Alex & Ryan, I know you cheated!
+The resultant ciphertext is:  \xcd\xca\xfa\xf9\x7b\x80\x0d\x42\xd6\x90\x6f\xa6\x8b\x4d\x5f\x9b\x8a\x3c\x3e\x9e\x68\x89\x40\x8c\x61\x36\x70\x6f\x4e\x95\x84\xd6
+The randomly generated key is:  \x3e\x18\x41\x2d\x14\x1c\x13\x79\x25\x27\x47\x49\x0c\x17\x2e\x12\x2a\x26\x21\x7d\x47\x75\x17\x45\x45\x16\x38\x55\x7e\x21\x09\x65
+The base64'd ciphertext is:  zcr6+XuADULWkG+mi01fm4o8Pp5oiUCMYTZwb06VhNY=
+The inline asm stub you can use is:
+
+void *ct;
+void *key;
+__asm {
+lea eax, ciphertext
+lea ebx, thekey
+jmp done
+ciphertext:
+_emit 0xcd
+_emit 0xca
+_emit 0xfa
+_emit 0xf9
+_emit 0x7b
+_emit 0x80
+_emit 0xd
+_emit 0x42
+_emit 0xd6
+_emit 0x90
+_emit 0x6f
+_emit 0xa6
+_emit 0x8b
+_emit 0x4d
+_emit 0x5f
+_emit 0x9b
+_emit 0x8a
+_emit 0x3c
+_emit 0x3e
+_emit 0x9e
+_emit 0x68
+_emit 0x89
+_emit 0x40
+_emit 0x8c
+_emit 0x61
+_emit 0x36
+_emit 0x70
+_emit 0x6f
+_emit 0x4e
+_emit 0x95
+_emit 0x84
+_emit 0xd6
+_emit 0x00
+thekey:
+_emit 0x3e
+_emit 0x18
+_emit 0x41
+_emit 0x2d
+_emit 0x14
+_emit 0x1c
+_emit 0x13
+_emit 0x79
+_emit 0x25
+_emit 0x27
+_emit 0x47
+_emit 0x49
+_emit 0xc
+_emit 0x17
+_emit 0x2e
+_emit 0x12
+_emit 0x2a
+_emit 0x26
+_emit 0x21
+_emit 0x7d
+_emit 0x47
+_emit 0x75
+_emit 0x17
+_emit 0x45
+_emit 0x45
+_emit 0x16
+_emit 0x38
+_emit 0x55
+_emit 0x7e
+_emit 0x21
+_emit 0x9
+_emit 0x65
+_emit 0x00
+done:
+mov ct, eax
+mov key, ebx
+}
+printf("%s\n",ct);
+printf("%s\n",key);
+

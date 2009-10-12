@@ -1,0 +1,51 @@
+Enter the plaintext> Chipotle-away!
+The resultant ciphertext is:  \xd8\xb1\x56\xe5\x8b\x1e\x37\x45\xc9\x11\x96\x4b\xcd\x1e
+The randomly generated key is:  \x11\x29\x6c\x61\x0d\x15\x13\x6d\x23\x26\x39\x08\x1e\x34
+The base64'd ciphertext is:  2LFW5YseN0XJEZZLzR4=
+The inline asm stub you can use is:
+
+void *ct;
+void *key;
+__asm {
+lea eax, ciphertext
+lea ebx, thekey
+jmp done
+ciphertext:
+_emit 0xd8
+_emit 0xb1
+_emit 0x56
+_emit 0xe5
+_emit 0x8b
+_emit 0x1e
+_emit 0x37
+_emit 0x45
+_emit 0xc9
+_emit 0x11
+_emit 0x96
+_emit 0x4b
+_emit 0xcd
+_emit 0x1e
+_emit 0x00
+thekey:
+_emit 0x11
+_emit 0x29
+_emit 0x6c
+_emit 0x61
+_emit 0xd
+_emit 0x15
+_emit 0x13
+_emit 0x6d
+_emit 0x23
+_emit 0x26
+_emit 0x39
+_emit 0x8
+_emit 0x1e
+_emit 0x34
+_emit 0x00
+done:
+mov ct, eax
+mov key, ebx
+}
+printf("%s\n",ct);
+printf("%s\n",key);
+

@@ -1,0 +1,5 @@
+--gcc # set on gcc-mode
+-LE:\mingw\lib\gcc\mingw32\3.4.2;E:\mingw\lib\gcc
+-LE:\mingw\mingw32\lib;E:\mingw\lib
+-zmingw32;gcc;moldname;mingwex;msvcrt
+-zkernel32;advapi32;user32;ws2_32;shell32

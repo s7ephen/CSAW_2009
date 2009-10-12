@@ -1,0 +1,16 @@
+Q. Linking with any library files (sometimes even of standard packages) 
+   produces message:
+       Error: Invalid library file (2) 'libraryname'
+   What is wrong and how use these libraries?
+
+A. The Borland import libraries (produced by implib) sometimes has wrong 
+   catalog format. Ilink32 doesn't use library catalog, the price is valuable 
+   increasing link time. UniLink USES catalog and so must check it consistency.
+   If you create import library by youself, use "right" tools (for example, 
+   implib by Digital Mars, (get 'Basic Utilities' on 
+   http://www.digitalmars.com or attempt to direct download it from 
+   ftp://ftp.digitalmars.com/bup.zip).
+   If you take this library from "standard" package (from BCB6, for instance),
+   repair wrong library with tlib by forcing it to recreate library catalog:
+   tlib libname +-0 >nul
+

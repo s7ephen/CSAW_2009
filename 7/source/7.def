@@ -1,0 +1,8 @@
+LIBRARY "7.dll"
+
+EXPORTS
+	tumbler1
+	tumbler2
+	tumbler3
+	tumbler4
+	tumbler5

@@ -1,0 +1,202 @@
+(dp0
+S'x86 Easy'
+p1
+(lp2
+I500
+aS'15a1481fba554e8002ca89013ceae50b'
+p3
+aS'The micro_httpd web server is running on port 8001.  The goal of this\nchallenge is to retrieve the token in the file kinda-secret.html, one\ndirectory above the web root.  This web server is run through\nmicro_inetd, its stdin/stdout/stderr file streams are connected to the\nsocket automatically so your shellcode does not need to connect its\nown socket.'
+p4
+asS'x86 Medium'
+p5
+(lp6
+I750
+aS'42c87be0d8b21f5488b2576729f4b442'
+p7
+aS"The mini_httpd web server is running on port 8002.  The secret token\nfor this challenge is stored in the web directory /priv8/secret.html,\nwhich is protected by an .htaccess file in /priv8/.  Don't bother\ntrying to guess the password, try and think outside of the box.  There\nis no spoon."
+p8
+asS'Are you my Mama?'
+p9
+(lp10
+I600
+aS'Kanye West is a jackass.'
+p11
+aS'    This dll was found by a forensics team on a compromised computer.\nYou are fairly certain it is part of the attackers toolkit. The\nforensics team resports that the attacker attempted to "clean his\ntracks" by deleting a number of files from the filesystem. He forgot\nthis one however. The good thing is that all \'core functionality\' of\nthe attacker\'s toolkit seems to be in this dll. A guy from the forensics\ndepartment said he wrote a small executable (loader) to LoadLibraryA() the dll.\nHe says he suspects the dll just needs to be LoadLibraryA() by a process\nof the "correct" name.\n'
+p12
+asS'Timing Matters!'
+p13
+(lp14
+I700
+aS'http://www.canabalt.com/'
+p15
+aS'This binary was downloaded originally as "codec.exe" from a site\nclaiming to distribute free full length movies\non the internet (as long as you install their "driver" ;-)\nAlthough this particular binary was not actually installed anywhere\non your company network, you (rightfully) suspect that this is a\npiece of malware. When you execute it however, it crashes (like\nother malware you have seen in the past). What is unique about\nthis one however is that it seems to have a few antidebugging\ntechniques, one you have seen before and a newer one that somehow\ninvolves timing.\n'
+p16
+asS'PowerPC Easy'
+p17
+(lp18
+I1000
+aS'4612f502b8936fab6fffc71d5ba7098c'
+p19
+aS'The micro_httpd web server is running on port 8001.  The goal of this\nchallenge is to retrieve the token in the file kinda-secret.html, one\ndirectory above the web root.  This web server is run through\nmicro_inetd, its stdin/stdout/stderr file streams are connected to the\nsocket automatically so your shellcode does not need to connect its\nown socket.'
+p20
+asS'PowerPC Hard'
+p21
+(lp22
+I2000
+aS'f2dd5fb0fe58bf8c8971f9b2b40bb2b6'
+p23
+aS'This challenge is also in the mini_httpd web server on port 8002.  The\ntoken for this challenge is stored in the file super-secret.html, one\ndirectory above the web root.  This challenge can only be solved after\nyou have solved the Medium challenge.  Also, you must use a full\nnetwork reverse connect or listening socket shell shellcode for this\nchallenge.'
+p24
+asS'BeingDebugged?'
+p25
+(lp26
+I500
+aS'22916d763014eacc592c9e37ac56b337'
+p27
+aS"\n    This binary was found on one of your client's sensitive\ninternal systems. It was originally part of the attacker's\nbundle of tools however, due to the clumsiness of one of your\nco-workers one of the accompanying executables was lost.\nNow all you have is 2.exe. You suspect that the lost executable\nwas actually the launcher for this one, it probably performed\nruntime patching on this binary so that it would run.\nFigure out what you need to do to get 2.exe to run.\n\n"
+p28
+asS'x86 Hard'
+p29
+(lp30
+I1000
+aS'4f42b2118ae13f0c0d01e79925db15e9'
+p31
+aS'This challenge is also in the mini_httpd web server on port 8002.  The\ntoken for this challenge is stored in the file super-secret.html, one\ndirectory above the web root.  This challenge can only be solved after\nyou have solved the Medium challenge.  Also, you must use a full\nnetwork reverse connect or listening socket shell shellcode for this\nchallenge.'
+p32
+asS'ARM Easy'
+p33
+(lp34
+I1000
+aS'd0839a024f6aef5b7cbd3b33569bc849'
+p35
+aS'The micro_httpd web server is running on port 8001.  The goal of this\nchallenge is to retrieve the token in the file kinda-secret.html, one\ndirectory above the web root.  This web server is run through\nmicro_inetd, its stdin/stdout/stderr file streams are connected to the\nsocket automatically so your shellcode does not need to connect its\nown socket.'
+p36
+asS'ARM Hard'
+p37
+(lp38
+I2000
+aS'102c0237bec28e95ead869f2adc8eb91'
+p39
+aS'This challenge is also in the mini_httpd web server on port 8002.  The\ntoken for this challenge is stored in the file super-secret.html, one\ndirectory above the web root.  This challenge can only be solved after\nyou have solved the Medium challenge.  Also, you must use a full\nnetwork reverse connect or listening socket shell shellcode for this\nchallenge.'
+p40
+asS'Spinlock'
+p41
+(lp42
+I700
+aS'The time has come the walrus said.'
+p43
+aS' \n    You were contacted by a worried system administrator.\nHe noticed about 2 weeks ago that someone had compromised\none of his domain controllers. He began monitoring suspicious\ntraffic going in and out of the machine. He noted that\nall the suspicious traffic was on TCP port 7777. When\nhe attempted to connect back to the attackers machine\nlate one night, he noticed a flurry of activity on the \ndomain controller and then the attacker was gone.\nAll that is left is a excerpt of traffic captures which \nhe has provided to you, and a single dll which you suspect\ncontains the encryption and decryption routines for \nthe network communication of the trojan.\n\nWhen viewing the suspicious dll in a tool like PEView\nor Depends.exe you notice that it exports 5 functions:\n    Tumbler1\n    Tumbler2\n    Tumbler3\n    Tumbler4 \n    and \n    Tumbler5\nYou suspect that (like a lock) these Tumblers must be strung together\nto properly encrypt and decrypt data.\n'
+p44
+asS'Web Challenge 6'
+p45
+(lp46
+I150
+aS'6b7e4b50998169bc8e2a2b253ee7d9b9'
+p47
+aS''
+p48
+asS'Web Challenge 7'
+p49
+(lp50
+I150
+aS'=2123409872345098237450928345720394857'
+p51
+ag48
+asS'Web Challenge 4'
+p52
+(lp53
+I200
+aS'b6fba5043d1a8fc1b670ea211c22b779c34c3c67'
+p54
+ag48
+asS'Web Challenge 5'
+p55
+(lp56
+I150
+aS'7db7cfa6112ae35488a00ee2b1af30f8'
+p57
+ag48
+asS'Web Challenge 2'
+p58
+(lp59
+I100
+aS'6eaa3449f7c743e714b795bf95777e31a16289123e35bdbf45f14a606a7285e8b25a540e7b887ce486524b0ab9249493'
+p60
+ag48
+asS'Web Challenge 3'
+p61
+(lp62
+I100
+aS'07f510b08daf9623b790b35b1281363b5854069f2af396fbb2c3b8731bb81ffd'
+p63
+ag48
+asS'Web Challenge 1'
+p64
+(lp65
+I50
+aS'd3cfbbe8d785f6af1c3ac78005d1a35ccc0bcd50'
+p66
+ag48
+asS'Web Challenge 8'
+p67
+(lp68
+I300
+aS'9fa2ed4d5c181386c717a486eadef4bfcd7d7ed926b5b204'
+p69
+ag48
+asS'Web Challenge 9'
+p70
+(lp71
+I300
+aS'd81e8213797f23651cf57e59b4bd8da0'
+p72
+ag48
+asS'PowerPC Medium'
+p73
+(lp74
+I1500
+aS'5c5f9b0d6eeb92f3f82d472213c8a17e'
+p75
+aS"The mini_httpd web server is running on port 8002.  The secret token\nfor this challenge is stored in the web directory /priv8/secret.html,\nwhich is protected by an .htaccess file in /priv8/.  Don't bother\ntrying to guess the password, try and think outside of the box.  There\nis no spoon."
+p76
+asS'You have bad BHO!'
+p77
+(lp78
+I450
+aS'She sells CSAWs by the seashore.'
+p79
+aS'    This particular piece of malware was found on a number of machines.\nIt is a banking trojan. It is designed to infect Internet Explorer\nand watch for when it is surfing to specific sites. This particular\ntrojan is implemented as a BHO (or Browser Helper Object). This means\nthat it is a single dll that is "registered" in a special way to associate\nitself with the Internet Explorer executable. Once running, internet explorer\nallows BHOs to "hook" (watch for) many different events: when documents start loading; finish\nloading; when keys are pressed; when mouse buttons are clicked; etc.\nA colleague of yours has provided you with a copy of the dll and batch files to load it with. '
+p80
+asS'Hey I Know You!'
+p81
+(lp82
+I600
+aS'Alex & Ryan, I know you cheated!'
+p83
+aS'    Your little brother is downloading and installing, any\nand everything he can find on the popular file-sharing networks.\nConsequently he is always needing you to "fix" this computer.\nHis machine is a cesspool of malware. This one particular one\nmade no attempts at being covert. It appears to be some kind\nof windows privilege escalator. To escalate however it injects\ncode into other processes. Now if only you knew which process\nit wanted to inject into.....\n'
+p84
+asS'ARM Medium'
+p85
+(lp86
+I1500
+aS'01d028f7547bd13b522c24afd45d9064'
+p87
+aS"The mini_httpd web server is running on port 8002.  The secret token\nfor this challenge is stored in the web directory /priv8/secret.html,\nwhich is protected by an .htaccess file in /priv8/.  Don't bother\ntrying to guess the password, try and think outside of the box.  There\nis no spoon."
+p88
+asS'Hey I Know You Too!'
+p89
+(lp90
+I700
+aS'Chipotle-away!'
+p91
+aS'    Your little brother is back on file sharing networks again...\nYou know the drill (see README.TXT of Challenge #3). This seems\nto be a newer version of the malware you looked at previously.\nThings have changed a bit...\n'
+p92
+asS'Jump-It'
+p93
+(lp94
+I400
+aS'Stephania_Vu'
+p95
+aS"The executable 1.exe was found on one of your client's compromised systems. This is a suspected piece of malware. You have been tasked with finding out what the malware does. It appears the malware writer made a mistake and the process is prematurely exiting."
+p96
+as.

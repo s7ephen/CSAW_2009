@@ -1,0 +1,37 @@
+
+Afternotes:
+-----------
+I really struggled with deciding between "crypto" and obfuscation. Here is why.
+An obfuscation routine could be 'lightweight' maybe even implemented as
+shellcode which could be polymorphicised so that you couldnt "cheat" by
+searching binaries for the routine. On the other hand, even though the routine
+itself is smaller and easier to hide you could find it through other means, like
+reversing "up to the point" you suspected like the printf() or user32 popup, or
+(once you knew it was using one of these), reverse backwards from the xrefs in
+IDA. If you were to do this, then because of the simplicity of the routines you could
+easily write a python script to emulate the obfuscation, by looking at the input
+strings and statically defined XOR "key" and avoid having to execute future
+challenges. In this way you would be able to "cheat" the process and 
+do all the challenges through static analysis, and I wanted to discourage this.
+I decided on using some lightweight crypto, specifically RC4 (mostly because of
+my familiarity with it, having written it in ASM many years ago). The reason for
+this decision was because once stripped it would be complex enough that it could
+not be easily emulated (in a python, perl, shell script) to avoid executing the
+binary. However, this complexity also makes the "key" routines 
+larger and less covert, so that it is easier to find within the binary. 
+I was confident however that stripping and statically compiling these routines
+would make it harder to identify as RC4, and thus difficult to reimplement
+outside of the binary, even if you had reversed out the input values and key
+values the routine was using.
+
+Furthermore, to discourage you from "cutting" and pasting the routine from the binary and
+executing it as shellcode in your own tool (to "cheat" future challenges),
+I compiled the individual routines a bit differently
+for each challenge. I used __fastcall and __stdcall and __cdecl calls differently. I also
+chose to unwind some loops using compiler options and inline routines. This
+would atleast change the way the registers layed out within the routines and
+provide some variation between challenges. This way, even when you did locate
+the routine, it wouldn't look as "familiar" so that you didnt get the idea that you could script
+or code your way out of future challenges by ripping out the routine and reusing
+it.
+

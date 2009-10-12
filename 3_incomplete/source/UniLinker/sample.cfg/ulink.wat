@@ -1,0 +1,2 @@
+-LE:\WATCOM\LIB386;E:\WATCOM\LIB386\NT
+-zkernel32;advapi32;user32;ws2_32;shell32

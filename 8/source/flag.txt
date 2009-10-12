@@ -1,0 +1,43 @@
+navi-two:source s7ephen$ python2.5
+Python 2.5.4 (r254:67916, May 17 2009, 18:55:52) 
+[GCC 4.0.1 (Apple Inc. build 5465)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from lockpick_server import *
+>>> encrypt("She sells CSAWs by the seashore.")
+"\x16- e6 ))6e\x06\x16\x04\x126e'<e1- e6 $6-*7 k"
+>>> ^D
+navi-two:source s7ephen$ cd ../../utils/
+navi-two:utils s7ephen$ python2.5
+Python 2.5.4 (r254:67916, May 17 2009, 18:55:52) 
+[GCC 4.0.1 (Apple Inc. build 5465)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from sa7encode import *
+Enter the plaintext> a
+The resultant ciphertext is:  \xa9
+The randomly generated key is:  \x69
+The base64'd ciphertext is:  qQ==
+The inline asm stub you can use is:
+
+void *ct;
+void *key;
+__asm {
+lea eax, ciphertext
+lea ebx, thekey
+jmp done
+ciphertext:
+_emit 0xa9
+_emit 0x00
+thekey:
+_emit 0x69
+_emit 0x00
+done:
+mov ct, eax
+mov key, ebx
+}
+printf("%s\n",ct);
+printf("%s\n",key);
+
+>>> print hexstr("\x16- e6 ))6e\x06\x16\x04\x126e'<e1- e6 $6-*7 k")         
+\x16\x2d\x20\x65\x36\x20\x29\x29\x36\x65\x06\x16\x04\x12\x36\x65\x27\x3c\x65\x31\x2d\x20\x65\x36\x20\x24\x36\x2d\x2a\x37\x20\x6b
+>>> 
+

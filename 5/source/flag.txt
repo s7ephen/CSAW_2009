@@ -1,0 +1,73 @@
+Enter the plaintext> Kanye West is a jackass.
+The resultant ciphertext is:
+\x7e\xc8\xfc\x76\x2b\x91\xdc\x26\xc6\x33\xe2\x5e\xb1\x24\x45\xc3\x60\x9e\x99\x82\x87\xfe\x99\x02
+The randomly generated key is:
+\x36\x61\x45\x5f\x68\x34\x4c\x45\x4f\x09\x1d\x3d\x44\x4a\x56\x6f\x40\x16\x6b\x16\x09\x6e\x40\x73
+The base64'd ciphertext is:  fsj8diuR3CbGM+JesSRFw2CemYKH/pkC
+The inline asm stub you can use is:
+
+void *ct;
+void *key;
+__asm {
+lea eax, ciphertext
+lea ebx, thekey
+jmp done
+ciphertext:
+_emit 0x7e
+_emit 0xc8
+_emit 0xfc
+_emit 0x76
+_emit 0x2b
+_emit 0x91
+_emit 0xdc
+_emit 0x26
+_emit 0xc6
+_emit 0x33
+_emit 0xe2
+_emit 0x5e
+_emit 0xb1
+_emit 0x24
+_emit 0x45
+_emit 0xc3
+_emit 0x60
+_emit 0x9e
+_emit 0x99
+_emit 0x82
+_emit 0x87
+_emit 0xfe
+_emit 0x99
+_emit 0x2
+_emit 0x00
+thekey:
+_emit 0x36
+_emit 0x61
+_emit 0x45
+_emit 0x5f
+_emit 0x68
+_emit 0x34
+_emit 0x4c
+_emit 0x45
+_emit 0x4f
+_emit 0x9
+_emit 0x1d
+_emit 0x3d
+_emit 0x44
+_emit 0x4a
+_emit 0x56
+_emit 0x6f
+_emit 0x40
+_emit 0x16
+_emit 0x6b
+_emit 0x16
+_emit 0x9
+_emit 0x6e
+_emit 0x40
+_emit 0x73
+_emit 0x00
+done:
+mov ct, eax
+mov key, ebx
+}
+printf("%s\n",ct);
+printf("%s\n",key);
+

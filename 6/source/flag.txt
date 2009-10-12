@@ -1,0 +1,174 @@
+>>> import md5;a=md5.md5();a.update("All this computer hacking is making me thirsty.")
+>>> a.hexdigest()
+'22916d763014eacc592c9e37ac56b337'
+>>> 
+
+>>> import md5;a=md5.md5();a.update("All this computer hacking is making me
+>>> thirsty.")
+>>> a.hexdigest()
+'22916d763014eacc592c9e37ac56b337'
+>>> 
+
+
+navi-two:source s7ephen$ ../../utils/sa7encode.py 
+Enter the plaintext> 22916d763014eacc592c9e37ac56b337
+The resultant ciphertext is:
+\xea\x20\xf6\x16\xdc\xab\x55\xdb\x7a\x1e\x8e\xb0\x03\xfe\x26\x27\xe5\x74\x73\xbd\xbb\x1b\xea\x4b\x92\xc1\x11\x50\x9b\x5b\x6a\x04
+The randomly generated key is:
+\x24\x53\x60\x08\x54\x5d\x1f\x56\x1b\x77\x57\x10\x50\x69\x4e\x43\x5d\x2e\x15\x21\x5c\x08\x57\x02\x40\x48\x7f\x62\x50\x55\x29\x35
+The base64'd ciphertext is:  6iD2FtyrVdt6Ho6wA/4mJ+V0c727G+pLksERUJtbagQ=
+The inline asm stub you can use is:
+
+void *ct;
+void *key;
+__asm {
+lea eax, ciphertext
+lea ebx, thekey
+jmp done
+ciphertext:
+_emit 0xea
+_emit 0x20
+_emit 0xf6
+_emit 0x16
+_emit 0xdc
+_emit 0xab
+_emit 0x55
+_emit 0xdb
+_emit 0x7a
+_emit 0x1e
+_emit 0x8e
+_emit 0xb0
+_emit 0x3
+_emit 0xfe
+_emit 0x26
+_emit 0x27
+_emit 0xe5
+_emit 0x74
+_emit 0x73
+_emit 0xbd
+_emit 0xbb
+_emit 0x1b
+_emit 0xea
+_emit 0x4b
+_emit 0x92
+_emit 0xc1
+_emit 0x11
+_emit 0x50
+_emit 0x9b
+_emit 0x5b
+_emit 0x6a
+_emit 0x4
+_emit 0x00
+thekey:
+_emit 0x24
+_emit 0x53
+_emit 0x60
+_emit 0x8
+_emit 0x54
+_emit 0x5d
+_emit 0x1f
+_emit 0x56
+_emit 0x1b
+_emit 0x77
+_emit 0x57
+_emit 0x10
+_emit 0x50
+_emit 0x69
+_emit 0x4e
+_emit 0x43
+_emit 0x5d
+_emit 0x2e
+_emit 0x15
+_emit 0x21
+_emit 0x5c
+_emit 0x8
+_emit 0x57
+_emit 0x2
+_emit 0x40
+_emit 0x48
+_emit 0x7f
+_emit 0x62
+_emit 0x50
+_emit 0x55
+_emit 0x29
+_emit 0x35
+_emit 0x00
+done:
+mov ct, eax
+mov key, ebx
+}
+printf("%s\n",ct);
+printf("%s\n",key);
+
+
+navi-two:utils s7ephen$ ./sa7encode.py 
+Enter the plaintext> http://www.canabalt.com/
+The resultant ciphertext is:  \xc2\x3d\x4d\x72\x81\xfb\xed\x7f\x4d\x32\x38\xb7\xd6\x59\x87\xea\x42\xed\x42\x18\x0c\x64\xec\x57
+The randomly generated key is:  \x63\x2e\x0f\x37\x7a\x13\x64\x7f\x10\x7f\x05\x04\x6e\x36\x60\x2b\x41\x73\x28\x52\x5e\x17\x0c\x3f
+The base64'd ciphertext is:  wj1NcoH77X9NMji31lmH6kLtQhgMZOxX
+The inline asm stub you can use is:
+
+void *ct;
+void *key;
+__asm {
+lea eax, ciphertext
+lea ebx, thekey
+jmp done
+ciphertext:
+_emit 0xc2
+_emit 0x3d
+_emit 0x4d
+_emit 0x72
+_emit 0x81
+_emit 0xfb
+_emit 0xed
+_emit 0x7f
+_emit 0x4d
+_emit 0x32
+_emit 0x38
+_emit 0xb7
+_emit 0xd6
+_emit 0x59
+_emit 0x87
+_emit 0xea
+_emit 0x42
+_emit 0xed
+_emit 0x42
+_emit 0x18
+_emit 0xc
+_emit 0x64
+_emit 0xec
+_emit 0x57
+_emit 0x00
+thekey:
+_emit 0x63
+_emit 0x2e
+_emit 0xf
+_emit 0x37
+_emit 0x7a
+_emit 0x13
+_emit 0x64
+_emit 0x7f
+_emit 0x10
+_emit 0x7f
+_emit 0x5
+_emit 0x4
+_emit 0x6e
+_emit 0x36
+_emit 0x60
+_emit 0x2b
+_emit 0x41
+_emit 0x73
+_emit 0x28
+_emit 0x52
+_emit 0x5e
+_emit 0x17
+_emit 0xc
+_emit 0x3f
+_emit 0x00
+done:
+mov ct, eax
+mov key, ebx
+}
+printf("%s\n",ct);
+printf("%s\n",key);
