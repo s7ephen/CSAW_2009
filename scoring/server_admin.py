@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.5
 """
     CSAW '09 Reversing Challenge
         Administrative Interface
@@ -149,6 +149,33 @@ class MasterUI(BaseUI):
 #        self.undoc_header = ""
         self.misc_header = ""
         self.ruler = "-"
+
+    def do_leaderboard(self, *args):
+        userdb_fh = open("./user.db","r")
+        userdb = pickle.load(userdb_fh)
+        userdb_fh.close()
+        self.userdb = userdb
+        leaderboard = {}
+        for team in self.userdb.keys():
+            leaderboard[team] = self.userdb[team][2]
+        print pp.pprint(leaderboard)
+
+    def do_show_team_solutions(self, *args):
+        userdb_fh = open("./user.db","r")
+        userdb = pickle.load(userdb_fh)
+        userdb_fh.close()
+        team = raw_input("Which Team/Player? > ")
+        if team in userdb.keys():
+            print pp.pprint(userdb[team][3])
+        else:
+            print "That team/player not found in database."
+        
+    def do_show_flags(self, *args):
+        flagdb_fh = open("./flag.db", "r")
+        flagdb = pickle.load(flagdb_fh)
+        flagdb_fh.close()
+        for flagname in flagdb.keys():
+            print "Challenge Name: ", flagname, "\n\tPoint Value: ", flagdb[flagname][0], "\n\tFlag: ", flagdb[flagname][1]
 
     def do_edit_users(self, *args):
         userdb_fh = open("./user.db","r")
