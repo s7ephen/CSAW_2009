@@ -1,0 +1,8 @@
+TARGETNAME = sa7ori
+TARGETPATH = obj
+TARGETTYPE = DRIVER
+
+INCLUDES   = %BUILD%\inc
+LIBS       = %BUILD%\lib
+
+SOURCES    = sa7ori.c

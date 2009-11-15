@@ -1,0 +1,16 @@
+
+
+386_OBJECTS=\
+ $(OBJ_PATH)\$O\sa7ori.obj \
+
+
+
+
+
+# lowercased
+BASEDIR=c:\winddk\6001.18001
+OBJECT_ROOT=c:\winddk\6001.18001
+MAKEDIR_LOWERCASE=z:\data\checkouts\github\int3.cc\driver_development\csaw_final
+OBJ_PATH=z:\data\checkouts\github\int3.cc\driver_development\csaw_final
+CONCURRENT_MIDL=0
+CONCURRENT_MANIFEST_BUILD=0

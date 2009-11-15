@@ -1,0 +1,8 @@
+Hint1: Will be my kernel reversing presentation.
+Hint2: Hint2.exe will trigger bluescreen with an incorrect IOCTL to the correct
+device.
+Hint3: Hint3.exe will use a correct ioctl (IOCTL_SAYHI) to get some incorrect
+data back.
+Hint4: Hint4.exe will use a correct ioctl (IOCTL_SAYHI) to get some incorrect
+data back.
+Hint4: sa7ori.h and sa7ori.pdb
