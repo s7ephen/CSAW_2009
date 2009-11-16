@@ -1,4 +1,5 @@
 Hint1: Will be my kernel reversing presentation.
+http://github.com/s7ephen/dontstuffbeansupyournose.com/raw/master/sdwest09/SDWest2009_Delaney:Ridley.pdf
 Hint2: Hint2.exe will trigger bluescreen with an incorrect IOCTL to the correct
 device.
 Hint3: Hint3.exe will use a correct ioctl (IOCTL_SAYHI) to get some incorrect
